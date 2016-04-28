@@ -11,9 +11,7 @@ use app\models\Article;
  * ArticleSearch represents the model behind the search form about `app\models\Article`.
  */
 class ArticleSearch extends Article
-{
-
-    /**
+{/**
      * @inheritdoc
      */
     public function rules()
