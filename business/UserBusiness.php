@@ -35,4 +35,36 @@ class UserBusiness
         $model->setCreateTime("date(Y-m-d H:i:s");
         $this->dao->saveUser($model);
     }
+
+    /**
+     * @param $name
+     * 通过用户姓名删除用户
+     */
+    public function delUser($name){
+
+        $this->dao->delUser($name);
+    }
+
+    /**
+     * @param $user
+     * 修改用户
+     */
+    public function updateUser($user){
+        $this->dao->updateUser($user);
+    }
+
+    /**
+     * @param $id
+     * 通过id查询用户
+     */
+    public function queryUserById($id){
+        return $this->dao->queryByUserId($id);
+    }
+
+    /**
+     * 查询用户
+     */
+    public function queryUser(){
+        return $this->dao->queryUser();
+    }
 }
